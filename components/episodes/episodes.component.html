@@ -1,0 +1,65 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Long+Cang&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <h1>Previously On</h1>
+    <a class="navbar-brand" href="http://localhost:4200/otherSeries">Séries</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="http://localhost:4200/series">Ma liste</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="http://localhost:4200/amis">Mes amis</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="http://localhost:4200/profil">Mon compte</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <div class="container-episodes">
+      <h3>Saison 1</h3>
+      <table class="table-episodes">
+        <tr>
+          <th>Épisodes</th>
+          <th>Options</th>
+          <th></th>
+        </tr>
+        <tr *ngFor="let data of episodes_season">
+
+            <td><a [routerLink]="['/detailsEpisode/',data.id]" >{{ data.code }}</a></td>
+          <td class="table-buttons">
+            <button class="btn" (click)="sawEpisode(data.id)">Marquer l'épisode comme vu</button>
+            <button class="btn" (click)="sawEpisodes(data.id)">Marquer l'épisode comme vu ainsi que tous les précédents</button>
+            <button class="btn" (click)="commentEpisode()">Commenter l'épisode</button>
+          </td>
+          <td>
+            <div class="modal-comment">
+              <div class="modal-comment-content">
+                <span class="close-comment" (click)="closeModalComment()">&times;</span>
+                <form [formGroup]="form" (ngSubmit)="submitComment(data.id)">
+                  <label for="comment">Commentaire :</label>
+                  <input type="text" class="form-control" id="comment" name="text" formControlName="text" required minlength="1" >
+                  <input type="submit" value="Ajouter un commentaire" class="btn float-right login_btn">
+                </form>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <img [src]="url_img"/>
+      <div class="modal-success">
+        <div class="modal-success-content">
+          <span class="close-success" (click)="closeModalSuccess()">&times;</span>
+          <p class="modal-p">Commentaire ajouté !</p>
+        </div>
+      </div>
+    </div>
+  </body>

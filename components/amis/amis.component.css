@@ -1,0 +1,105 @@
+header, body{
+    background-color: rgb(26, 25,24);
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    font-size: 80px;
+    font-family: 'Long Cang', cursive;
+    margin:0px;
+}
+.navbar-brand{
+    margin-left:120px;
+}
+p{
+    text-align: center;
+    color: red;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+}
+
+.card{
+    border: 1px solid grey;
+    margin-top: 190px;
+    background-color: grey;
+    display: flex;
+   
+}
+
+.container{
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 60px;
+  
+}
+
+h3{
+    color:red;
+    font-family: 'Anton', sans-serif;
+    margin-left: 364px;
+    margin-bottom:-170px;
+    margin-top: 150px;
+    border-bottom: 1px solid white;
+    width: 1000px;
+}
+
+a{
+    margin-left: 60px;
+}
+a:hover{
+color: red;
+}
+a.btn-primary{
+color:white;
+}
+
+img{
+    border-radius: 50%;
+    width:200px;
+    margin-left: 360px;
+    margin-top:200px;
+}
+
+h6{
+    margin-left: 355px;
+    color:white;
+    font-family: 'Long Cang', cursive;
+    font-size:40px;
+    color:red;
+    text-decoration: none;
+
+}
+
+.container{
+    flex-direction: row;
+  margin-top:300px;
+}
+
+a, img, h6{
+    min-width: 120px;
+    margin:0px;
+ 
+}
+
+button{
+    background-color: gray;
+    width: 90px;
+    border-radius:5px;
+    font-family: 'Raleway', sans-serif;;
+    margin-bottom: 10px;
+    margin-top:10px;
+    color:black;
+    font-size: 15px;
+}
+
+a{
+    font-family: 'Raleway', sans-serif;
+    color:white;
+    text-decoration: none;
+}
+
+.container a{
+    text-decoration: none;
+}

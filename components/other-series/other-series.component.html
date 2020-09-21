@@ -1,0 +1,46 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Long+Cang&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+       <div class="bg">
+       
+        <nav class="navbar navbar-expand-lg">
+                <h1>Previously On</h1>
+                <a class="navbar-brand" href="http://localhost:4200/otherSeries">Séries</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:4200/series">Ma liste</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:4200/amis">Mes amis</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:4200/profil">Mon compte</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </nav>
+        
+  <h3>À voir</h3>
+  <div class="container">
+      <div *ngFor="let serie of otherSeries" class="card">
+        <img class="card-img-top" [src]="serie.images['show']" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ serie.title }}</h5>
+          <button class="btn btn-primary" (click)="addSerie(serie.id)"><img src="assets/plus.png" height="10px"/></button>
+          <a [routerLink]="['/detailsSerie/', serie.id]" class="btn btn-primary">Détails</a>
+        </div>
+      </div>
+      <div class="modal-success">
+        <div class="modal-content">
+          <span class="close" (click)="closeModal()">&times;</span>
+          <p class="modal-p">Série ajoutée à votre liste !</p>
+        </div>
+      </div>
+  </div>

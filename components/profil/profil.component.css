@@ -1,0 +1,46 @@
+header, body{
+    background-color: rgb(26, 25,24);
+    min-height: 100vh;
+}
+
+h1{
+    text-align: left;
+    color: red;
+    font-size: 80px;
+    font-family: 'Long Cang', cursive;
+    margin:0px;
+}
+
+h3{
+    margin-top: 60px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 200px;
+}
+
+
+
+.profil{
+    margin-left: 200px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid white;
+    margin-top: 30px;
+    width: 900px;
+    padding:100px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.avatar{
+    background-image: url('/assets/avatar.jpg');
+}
+
+a{margin-left: 160px;
+    color:white;
+}
+
+a:hover{
+    color:red;
+}

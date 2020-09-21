@@ -1,0 +1,49 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Long+Cang&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+<body>
+       <div class="bg">
+       
+        <nav class="navbar navbar-expand-lg">
+                <h1>Previously On</h1>
+                <a class="navbar-brand" href="http://localhost:4200/otherSeries">Séries</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:4200/amis">Mes amis</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:4200/profil">Mon compte</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </nav>
+        
+        <h3>Mes séries</h3></div>
+  <div class="container">
+    <div *ngFor="let serie of series" class="card" style="width: 27rem;">
+      <img class="card-img-top" [src]="serie.images['show']" alt="Card image cap">
+      <div class="card-body"><div class="card-text"></div>
+        <h5 class="card-title">{{serie.title}}</h5><button class="seasons" type="button" [routerLink]="['/episodes/', serie.id]" >Episodes</button>
+          <button class="Archiver" type="button"(click)="archiveSerie(serie.id)">Série archivée</button> <div class="modal-success">
+              <div class="modal-content">
+                <span class="close" (click)="closeModal()">&times;</span>
+                <p class="modal-p">Série archivée !</p>
+              </div>
+            </div>
+     
+      <button class="delete" type="button" (click)="deleteSerie(serie.id)">Série supprimée</button>  <div class="modal-success1">
+          <div class="modal-content1">
+            <span class="close1" (click)="closeModal1()">&times;</span>
+            <p class="modal-p1">Série supprimmée !</p>
+          </div>
+        </div>
+    </div> 
+  </div>
+  </div>
+</body>

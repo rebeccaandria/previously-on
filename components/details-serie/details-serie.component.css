@@ -1,0 +1,97 @@
+header, body{
+    background-color: black;
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    font-size: 80px;
+    font-family: 'Long Cang', cursive;
+    margin:0px;
+}
+
+
+h3{
+    
+    color:red;
+    font-family: 'Anton', sans-serif;
+    margin-left: 364px;
+    margin-bottom:-170px;
+    margin-top: 50px;
+    border-bottom: 1px solid white;
+    width: 1380px;
+}
+
+a{
+    color:white;
+}
+
+a:hover{
+    color: red;
+}
+.poster{
+    margin-top:200px;
+    width:500px;
+    margin-left:365px;
+    margin-bottom: 30px;
+    
+}
+
+.title{
+    color: red;
+   margin-top: -658px;
+   margin-left:900px;
+   font-size:30px;
+   font-family: 'Raleway', sans-serif;
+  
+}
+
+.details{
+    margin-bottom: 40px;
+}
+p{
+  color: white;
+  margin-left: 890px;
+  font-size:25px;
+  width: 45%;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 90px;
+}
+
+
+.title2{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.genre{
+    margin-left: 900px;
+    color:gray;
+    font-size: 20px;
+}
+.container{
+   
+    margin-top: -10px;
+    color:grey;
+    font-size: 20px;  
+    min-height: 100vh;
+}
+
+.saisons{
+    margin-left: 899px;
+    margin-top: 252px;
+    color: red;
+    font-size: 30px;
+}
+
+.resume{
+    color: gray;
+    font-family: 'Raleway', sans-serif;
+    margin-top:90px;
+}
+
+.navbar-brand{
+    margin-left:140px;
+}
